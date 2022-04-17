@@ -4,17 +4,17 @@ import ProfileImage from "../ProfileImage";
 
 const PersonMayKnow = ({ person_name, person_image, following }) => {
   return (
-    <div className="flex flex-0-auto flex-col justify-between items-center gap-2 w-1/6">
-      <ProfileImage className={"w-full aspect-square"} src={person_image} />
-      <span className="text-semitiny font-bold break-words text-center max-lines-2">
+    <div className="flex-0-auto flex w-1/6 flex-col items-center justify-between gap-2">
+      <ProfileImage className={"aspect-square w-full"} src={person_image} />
+      <span className="max-lines-2 break-words text-center text-semitiny font-bold">
         {person_name}
       </span>
       {following ? (
-        <button className="border-primary border text-sm px-3 py-1 rounded-full text-primary">
+        <button className="rounded-full border border-primary px-3 py-1 text-sm text-lg text-primary">
           <BsPersonCheck />
         </button>
       ) : (
-        <button className="bg-primary text-sm px-3 py-1 rounded-full text-white">
+        <button className="rounded-full bg-primary px-3 py-1 text-sm text-lg text-white">
           <BsPersonPlus />
         </button>
       )}
@@ -25,15 +25,15 @@ const PersonMayKnow = ({ person_name, person_image, following }) => {
 const PeopleMayKnow = () => {
   return (
     <div className="feed-card-no-p py-3">
-      <div className="flex justify-between items-center px-3">
-        <span className="text-md text-gray-400 font-bold">
+      <div className="flex items-center justify-between px-3">
+        <span className="text-md font-bold text-gray-400">
           People you may know
         </span>
         <span>
           <FaTimes className="text-gray-400" />
         </span>
       </div>
-      <div className="overflow-x-auto flex gap-6 pb-2 px-3">
+      <div className="flex gap-6 overflow-x-auto px-3 pb-2">
         <PersonMayKnow person_name={"Denis"} />
         <PersonMayKnow person_name={"Marcos"} following />
         <PersonMayKnow person_name={"Vanessa"} following />

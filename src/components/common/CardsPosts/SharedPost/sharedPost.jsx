@@ -2,7 +2,7 @@ import CardHeader from "../common/CardHeader";
 
 const SharedPost = ({ owner_name, owner_photo, time_ago, body_text }) => {
   return (
-    <div className="border-l border-gray-300 pl-3 my-2">
+    <div className="my-2 border-l border-gray-300 pl-3">
       <CardHeader
         owner_name={owner_name}
         owner_photo={owner_photo}

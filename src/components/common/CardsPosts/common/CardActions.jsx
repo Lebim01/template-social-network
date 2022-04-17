@@ -7,11 +7,11 @@ const CardActions = ({ likes_count, comments_count }) => {
   return (
     <div className="flex">
       <div className="flex flex-1 gap-5">
-        <div className="flex items-center text-gray-400 gap-1">
+        <div className="flex items-center gap-1 text-gray-400">
           <BiLike className="h-5 w-5" />
           <span className="text-sm">{likes_count || null}</span>
         </div>
-        <div className="flex items-center text-gray-400 gap-1">
+        <div className="flex items-center gap-1 text-gray-400">
           <FaRegComment className="h-5 w-5" />
           <span className="text-sm">{comments_count || null}</span>
         </div>
