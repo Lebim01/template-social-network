@@ -9,16 +9,15 @@ import IconBadgeCount from "components/common/IconBadge/count";
 const Header = () => {
   return (
     <div className="flex w-full flex-col gap-1 bg-primary">
-      <div className="mt-4 flex justify-between px-3">
-        <div className="h-5 w-5 rounded-full border border-black shadow-md shadow-stone-600"></div>
+      <div className="flex items-center justify-between py-3 px-3">
+        <span className="border border-dashed px-3 text-2xl font-bold text-gray-300">
+          Logo Here
+        </span>
         <div>
           <IconBadgeCount count={5}>
             <HiOutlineAnnotation className="h-6 w-6 text-white" />
           </IconBadgeCount>
         </div>
-      </div>
-      <div className="mb-2 px-3">
-        <span className="text-2xl font-bold text-white">Feed</span>
       </div>
       <div className="flex items-center rounded-t-lg border-b border-b-gray-300 bg-white px-2">
         <input placeholder="What's new" className="flex-1 p-2 text-lg" />

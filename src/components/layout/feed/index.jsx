@@ -1,25 +1,47 @@
-import CardPost from "components/common/CardsPosts/Post";
 import PeopleMayKnow from "components/common/PeopleMayKnow";
-import SharedCardPost from "components/common/CardsPosts/SharedPost";
 import FooterNavigationBar from "components/common/FooterNavigationBar";
 import Header from "./header";
-import SharedCardLink from "components/common/CardsPosts/SharedLink";
-import SharedCardMedia from "components/common/CardsPosts/SharedMedia";
+import Post from "components/common/CardsPosts/Post";
+import PostSharedPost from "components/common/CardsPosts/SharedPost";
+import PostSharedLink from "components/common/CardsPosts/SharedLink";
+import PostSharedMedia from "components/common/CardsPosts/SharedMedia";
+import PostSharedLive from "components/common/CardsPosts/Live";
+import PostSharedEvent from "components/common/CardsPosts/SharedEvent";
 
 const Body = () => {
   return (
     <div className="flex flex-col gap-3 overflow-auto pb-3">
-      <SharedCardMedia
-        owner_name="Victor Alvarez"
-        time_ago="1 day ago"
+      <PostSharedEvent
+        owner_name="John Doe"
+        time_ago="Yesterday"
+        likes_count={532}
+        comments_count={41}
+        shared_count={9}
+        event={{
+          name: "Compatible Inkjet Cartridge Which...",
+          place: "South Rocky",
+          people: [{}, {}, {}, {}, {}, {}, {}, {}],
+          date: new Date(2022, 1, 17, 0, 0, 0, 0),
+        }}
+      />
+      <PostSharedLive
+        owner_name="John Doe"
+        time_ago="Now"
+        likes_count={532}
+        comments_count={41}
+        shared_count={9}
+      />
+      <PostSharedMedia
+        owner_name="John Doe"
+        time_ago="1 year ago"
         likes_count={532}
         liked
         comments_count={41}
         shared_count={9}
         files={[1, 2, 3, 4, 5, 6, 7, 8]}
       />
-      <SharedCardMedia
-        owner_name="Victor Alvarez"
+      <PostSharedMedia
+        owner_name="John Doe"
         time_ago="1 day ago"
         likes_count={532}
         liked
@@ -27,8 +49,8 @@ const Body = () => {
         shared_count={9}
         files={[1, 2, 3, 4]}
       />
-      <SharedCardMedia
-        owner_name="Victor Alvarez"
+      <PostSharedMedia
+        owner_name="John Doe"
         time_ago="1 day ago"
         likes_count={532}
         liked
@@ -36,8 +58,8 @@ const Body = () => {
         shared_count={9}
         files={[1, 2, 3]}
       />
-      <SharedCardMedia
-        owner_name="Victor Alvarez"
+      <PostSharedMedia
+        owner_name="John Doe"
         time_ago="1 day ago"
         likes_count={532}
         liked
@@ -45,8 +67,8 @@ const Body = () => {
         shared_count={9}
         files={[1, 2]}
       />
-      <SharedCardMedia
-        owner_name="Victor Alvarez"
+      <PostSharedMedia
+        owner_name="John Doe"
         time_ago="1 day ago"
         likes_count={532}
         liked
@@ -54,32 +76,32 @@ const Body = () => {
         shared_count={9}
         files={[1]}
       />
-      <SharedCardLink
+      <PostSharedLink
         body_text={"Watch this link"}
-        owner_name="Victor Alvarez"
+        owner_name="John Doe"
         time_ago="1 day ago"
         link="https://google.com"
       />
-      <CardPost
+      <Post
         body_text={
           "Living in today's metropolitan world of cellular phones, mobile"
         }
-        owner_name="Victor Alvarez"
+        owner_name="John Doe"
         time_ago="1 day ago"
       />
       <PeopleMayKnow />
-      <SharedCardPost
+      <PostSharedPost
         body_text={
           "Living in today's metropolitan world of cellular phones, mobile"
         }
-        owner_name="Victor Alvarez"
+        owner_name="John Doe"
         time_ago="1 day ago"
         likes_count={39}
         comments_count={10}
         shared={{
           body_text:
             "Living in today's metropolitan world of cellular phones, mobile",
-          owner_name: "Victor Alvarez",
+          owner_name: "John Doe",
           time_ago: "1 day ago",
         }}
       />

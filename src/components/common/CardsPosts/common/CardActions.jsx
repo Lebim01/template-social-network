@@ -1,6 +1,5 @@
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
-import { BiLike } from "react-icons/bi";
-import { FaRegComment } from "react-icons/fa";
+import { FaRegComment, FaRegThumbsUp } from "react-icons/fa";
 import { BsArrow90DegRight } from "react-icons/bs";
 
 const CardActions = ({ likes_count, comments_count, shared_count, liked }) => {
@@ -12,7 +11,7 @@ const CardActions = ({ likes_count, comments_count, shared_count, liked }) => {
             liked ? "font-bold text-primary" : "text-gray-400"
           }`}
         >
-          <BiLike className="h-5 w-5" />
+          <FaRegThumbsUp className="h-5 w-5" />
           <span className="text-sm">{likes_count || null}</span>
         </div>
         <div className="flex items-center gap-1 text-gray-400">

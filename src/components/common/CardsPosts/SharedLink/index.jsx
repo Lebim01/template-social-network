@@ -2,7 +2,7 @@ import CardActions from "../common/CardActions";
 import CardHeader from "../common/CardHeader";
 import SharedLink from "./sharedLink";
 
-const SharedCardLink = ({
+const PostSharedLink = ({
   owner_photo,
   owner_name,
   time_ago,
@@ -39,4 +39,4 @@ const SharedCardLink = ({
   );
 };
 
-export default SharedCardLink;
+export default PostSharedLink;

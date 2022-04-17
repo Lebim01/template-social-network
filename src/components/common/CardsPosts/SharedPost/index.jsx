@@ -2,7 +2,7 @@ import CardActions from "../common/CardActions";
 import CardHeader from "../common/CardHeader";
 import SharedPost from "./sharedPost";
 
-const SharedCardPost = ({
+const PostSharedPost = ({
   owner_photo,
   owner_name,
   time_ago,
@@ -35,4 +35,4 @@ const SharedCardPost = ({
   );
 };
 
-export default SharedCardPost;
+export default PostSharedPost;

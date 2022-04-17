@@ -1,16 +1,14 @@
 import CardActions from "../common/CardActions";
 import CardHeader from "../common/CardHeader";
-import SharedMedia from "./sharedMedia";
+import SharedLive from "./sharedLive";
 
-const PostSharedMedia = ({
+const PostSharedLive = ({
   owner_photo,
   owner_name,
   time_ago,
+  body_text,
   likes_count,
   comments_count,
-  shared_count,
-  liked,
-  files,
 }) => {
   return (
     <div className="feed-card-no-p">
@@ -22,23 +20,21 @@ const PostSharedMedia = ({
           customText={
             <span>
               <span className="font-bold">{owner_name}</span>{" "}
-              <span className="text-gray-500">shared</span>{" "}
-              <span className="">{files.length} photos</span>
+              <span className="text-gray-500">began to broadcast</span>{" "}
             </span>
           }
         />
       </div>
-      <SharedMedia files={files} />
+      {body_text && <div className="px-3 text-lg">{body_text}</div>}
+      <SharedLive />
       <div className="px-3 pb-3">
         <CardActions
           likes_count={likes_count}
           comments_count={comments_count}
-          shared_count={shared_count}
-          liked={liked}
         />
       </div>
     </div>
   );
 };
 
-export default PostSharedMedia;
+export default PostSharedLive;

@@ -1,7 +1,7 @@
 import CardHeader from "../common/CardHeader";
 import CardActions from "../common/CardActions";
 
-const CardPost = ({ owner_photo, owner_name, time_ago, body_text }) => {
+const Post = ({ owner_photo, owner_name, time_ago, body_text }) => {
   return (
     <div className="feed-card">
       <CardHeader
@@ -16,4 +16,4 @@ const CardPost = ({ owner_photo, owner_name, time_ago, body_text }) => {
   );
 };
 
-export default CardPost;
+export default Post;
