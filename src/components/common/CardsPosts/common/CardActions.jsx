@@ -3,11 +3,15 @@ import { BiLike } from "react-icons/bi";
 import { FaRegComment } from "react-icons/fa";
 import { BsArrow90DegRight } from "react-icons/bs";
 
-const CardActions = ({ likes_count, comments_count }) => {
+const CardActions = ({ likes_count, comments_count, shared_count, liked }) => {
   return (
     <div className="flex">
       <div className="flex flex-1 gap-5">
-        <div className="flex items-center gap-1 text-gray-400">
+        <div
+          className={`flex items-center gap-1 ${
+            liked ? "font-bold text-primary" : "text-gray-400"
+          }`}
+        >
           <BiLike className="h-5 w-5" />
           <span className="text-sm">{likes_count || null}</span>
         </div>
@@ -15,7 +19,10 @@ const CardActions = ({ likes_count, comments_count }) => {
           <FaRegComment className="h-5 w-5" />
           <span className="text-sm">{comments_count || null}</span>
         </div>
-        <BsArrow90DegRight className="h-5 w-5 text-gray-400" />
+        <div className="flex items-center gap-1 text-gray-400">
+          <BsArrow90DegRight className="h-5 w-5" />
+          <span className="text-sm">{shared_count || null}</span>
+        </div>
       </div>
       <div>
         <HiOutlineDotsHorizontal className="h-5 w-5 text-gray-400" />

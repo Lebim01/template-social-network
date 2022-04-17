@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 .feed-card {
-  @apply bg-white p-3 flex flex-col gap-3 border-y border-y-gray-200;
+  @apply relative flex flex-col gap-3 border-y border-y-gray-200 bg-white p-3;
 }
 
 .feed-card-no-p {
-  @apply bg-white flex flex-col gap-3 border-y border-y-gray-200;
+  @apply flex flex-col gap-3 border-y border-y-gray-200 bg-white;
 }

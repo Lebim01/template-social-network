@@ -3,10 +3,63 @@ import PeopleMayKnow from "components/common/PeopleMayKnow";
 import SharedCardPost from "components/common/CardsPosts/SharedPost";
 import FooterNavigationBar from "components/common/FooterNavigationBar";
 import Header from "./header";
+import SharedCardLink from "components/common/CardsPosts/SharedLink";
+import SharedCardMedia from "components/common/CardsPosts/SharedMedia";
 
 const Body = () => {
   return (
     <div className="flex flex-col gap-3 overflow-auto pb-3">
+      <SharedCardMedia
+        owner_name="Victor Alvarez"
+        time_ago="1 day ago"
+        likes_count={532}
+        liked
+        comments_count={41}
+        shared_count={9}
+        files={[1, 2, 3, 4, 5, 6, 7, 8]}
+      />
+      <SharedCardMedia
+        owner_name="Victor Alvarez"
+        time_ago="1 day ago"
+        likes_count={532}
+        liked
+        comments_count={41}
+        shared_count={9}
+        files={[1, 2, 3, 4]}
+      />
+      <SharedCardMedia
+        owner_name="Victor Alvarez"
+        time_ago="1 day ago"
+        likes_count={532}
+        liked
+        comments_count={41}
+        shared_count={9}
+        files={[1, 2, 3]}
+      />
+      <SharedCardMedia
+        owner_name="Victor Alvarez"
+        time_ago="1 day ago"
+        likes_count={532}
+        liked
+        comments_count={41}
+        shared_count={9}
+        files={[1, 2]}
+      />
+      <SharedCardMedia
+        owner_name="Victor Alvarez"
+        time_ago="1 day ago"
+        likes_count={532}
+        liked
+        comments_count={41}
+        shared_count={9}
+        files={[1]}
+      />
+      <SharedCardLink
+        body_text={"Watch this link"}
+        owner_name="Victor Alvarez"
+        time_ago="1 day ago"
+        link="https://google.com"
+      />
       <CardPost
         body_text={
           "Living in today's metropolitan world of cellular phones, mobile"
@@ -29,27 +82,6 @@ const Body = () => {
           owner_name: "Victor Alvarez",
           time_ago: "1 day ago",
         }}
-      />
-      <CardPost
-        body_text={
-          "Living in today's metropolitan world of cellular phones, mobile"
-        }
-        owner_name="Victor Alvarez"
-        time_ago="1 day ago"
-      />
-      <CardPost
-        body_text={
-          "Living in today's metropolitan world of cellular phones, mobile"
-        }
-        owner_name="Victor Alvarez"
-        time_ago="1 day ago"
-      />
-      <CardPost
-        body_text={
-          "Living in today's metropolitan world of cellular phones, mobile"
-        }
-        owner_name="Victor Alvarez"
-        time_ago="1 day ago"
       />
     </div>
   );
