@@ -1,0 +1,17 @@
+@mixin max-lines-x-list {
+  @for $i from 1 through 5 {
+      .max-lines-#{$i} { 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: #{$i};
+      }
+  }
+}
+
+@include max-lines-x-list;
+
+.flex-0-auto {
+  flex: 0 0 auto;
+}
