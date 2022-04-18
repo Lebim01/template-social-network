@@ -13,6 +13,7 @@ module.exports = {
       },
       colors: {
         primary: '#5458F7',
+        accent: '#FF0000'
       },
     },
   },

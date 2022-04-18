@@ -1,6 +1,6 @@
 import { FaTimes } from "react-icons/fa";
 import { BsPersonCheck, BsPersonPlus } from "react-icons/bs";
-import ProfileImage from "../ProfileImage";
+import ProfileImage from "../../common/ProfileImage";
 
 const PersonMayKnow = ({ person_name, person_image, following }) => {
   return (

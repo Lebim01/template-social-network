@@ -1,7 +1,7 @@
 import { BsChatLeft, BsWindow } from "react-icons/bs";
 import { TiFlashOutline } from "react-icons/ti";
 import { FiMenu } from "react-icons/fi";
-import IconBadgeCount from "../IconBadge/count";
+import IconBadgeCount from "../../IconBadge/count";
 
 const FooterNavigationBar = () => {
   return (

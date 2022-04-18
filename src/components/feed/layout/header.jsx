@@ -1,10 +1,9 @@
 import {
-  HiOutlineAnnotation,
+  HiSearch,
   HiOutlineVideoCamera,
   HiOutlinePhotograph,
   HiOutlineDotsHorizontal,
 } from "react-icons/hi";
-import IconBadgeCount from "components/common/IconBadge/count";
 
 const Header = () => {
   return (
@@ -14,9 +13,7 @@ const Header = () => {
           Logo Here
         </span>
         <div>
-          <IconBadgeCount count={5}>
-            <HiOutlineAnnotation className="h-6 w-6 text-white" />
-          </IconBadgeCount>
+          <HiSearch className="h-6 w-6 text-white" />
         </div>
       </div>
       <div className="flex items-center rounded-t-lg border-b border-b-gray-300 bg-white px-2">

@@ -1,12 +1,12 @@
-import PeopleMayKnow from "components/common/PeopleMayKnow";
-import FooterNavigationBar from "components/common/FooterNavigationBar";
-import Header from "./header";
-import Post from "components/common/CardsPosts/Post";
-import PostSharedPost from "components/common/CardsPosts/SharedPost";
-import PostSharedLink from "components/common/CardsPosts/SharedLink";
-import PostSharedMedia from "components/common/CardsPosts/SharedMedia";
-import PostSharedLive from "components/common/CardsPosts/Live";
-import PostSharedEvent from "components/common/CardsPosts/SharedEvent";
+import PeopleMayKnow from "components/feed/PeopleMayKnow";
+import FooterNavigationBar from "components/common/layout/FooterNavigationBar";
+import Header from "./layout/header";
+import Post from "components/feed/CardsPosts/Post";
+import PostSharedPost from "components/feed/CardsPosts/SharedPost";
+import PostSharedLink from "components/feed/CardsPosts/SharedLink";
+import PostSharedMedia from "components/feed/CardsPosts/SharedMedia";
+import PostSharedLive from "components/feed/CardsPosts/Live";
+import PostSharedEvent from "components/feed/CardsPosts/SharedEvent";
 
 const Body = () => {
   return (
@@ -18,7 +18,7 @@ const Body = () => {
         comments_count={41}
         shared_count={9}
         event={{
-          name: "Compatible Inkjet Cartridge Which...",
+          name: "Compatible Inkjet Cartridge Which",
           place: "South Rocky",
           people: [{}, {}, {}, {}, {}, {}, {}, {}],
           date: new Date(2022, 1, 17, 0, 0, 0, 0),

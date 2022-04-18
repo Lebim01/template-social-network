@@ -1,6 +1,7 @@
 import ProfileImage from "components/common/ProfileImage";
+import Link from "next/link";
 
-const CardHeader = ({ owner_name, time_ago, customText }) => {
+const CardHeader = ({ owner_name, time_ago, customText, link }) => {
   return (
     <div className="flex items-center gap-3">
       <ProfileImage className={"h-10 w-10"} />
@@ -12,7 +13,15 @@ const CardHeader = ({ owner_name, time_ago, customText }) => {
             <span className="font-bold">{owner_name}</span>
           )}
         </span>
-        <span className="text-sm text-gray-400">{time_ago}</span>
+        {link ? (
+          <Link {...link}>
+            <span className="text-sm text-gray-400 decoration-primary hover:underline active:underline">
+              {time_ago}
+            </span>
+          </Link>
+        ) : (
+          <span className="text-sm text-gray-400">{time_ago}</span>
+        )}
       </div>
     </div>
   );
