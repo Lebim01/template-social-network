@@ -9,3 +9,8 @@
 .feed-card-no-p {
   @apply flex flex-col gap-3 border-y border-y-gray-200 bg-white;
 }
+
+.separator {
+  height: 1px;
+  @apply w-full bg-gray-100;
+}

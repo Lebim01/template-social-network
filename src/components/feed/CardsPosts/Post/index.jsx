@@ -20,7 +20,7 @@ const Post = ({
         }}
       />
       <div className="text-lg">{body_text}</div>
-      <div className="h-[1px] w-full bg-gray-100"></div>
+      <div className="separator"></div>
       <CardActions />
     </div>
   );

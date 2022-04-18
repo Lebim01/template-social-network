@@ -1,9 +1,9 @@
 import ProfileImage from "../ProfileImage";
 
-const OverloapProfiles = ({ profiles }) => {
+const OverloapProfiles = ({ profiles, max = 10 }) => {
   return (
     <div className="overloap-profiles flex">
-      {profiles.slice(0, 10).map((f, index) => (
+      {profiles.slice(0, max).map((f, index) => (
         <ProfileImage
           key={index}
           src={f.photo}

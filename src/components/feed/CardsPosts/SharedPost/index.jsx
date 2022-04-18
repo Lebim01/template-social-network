@@ -29,7 +29,7 @@ const PostSharedPost = ({
         {body_text}
         <SharedPost {...shared} />
       </div>
-      <div className="h-[1px] w-full bg-gray-100"></div>
+      <div className="separator"></div>
       <CardActions likes_count={likes_count} comments_count={comments_count} />
     </div>
   );

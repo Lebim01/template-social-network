@@ -29,7 +29,7 @@ const PostSharedEvent = ({
       </div>
       <SharedEvent {...event} />
       <div className="px-3">
-        <div className="h-[1px] w-full bg-gray-100"></div>
+        <div className="separator"></div>
       </div>
       <div className="mb-3 flex justify-between px-3">
         <div className="flex gap-10">
