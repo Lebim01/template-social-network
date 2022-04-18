@@ -16,7 +16,7 @@ const SharedLink = ({ link }) => {
         <Link href={link} passHref>
           <a target="_blank">
             <span className="mt-2 flex gap-1 text-primary">
-              <TiFlashOutline className="h-6 w-6 rounded-full bg-primary p-1 text-white" />
+              <TiFlashOutline className="h-6 w-6 rounded-full bg-primary p-1 text-primary-text" />
               Read more
             </span>
           </a>

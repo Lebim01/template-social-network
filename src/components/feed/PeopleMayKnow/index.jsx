@@ -10,11 +10,11 @@ const PersonMayKnow = ({ person_name, person_image, following }) => {
         {person_name}
       </span>
       {following ? (
-        <button className="rounded-full border border-primary px-3 py-1 text-sm text-lg text-primary">
+        <button className="rounded-full border border-primary px-3 py-1 text-lg text-primary">
           <BsPersonCheck />
         </button>
       ) : (
-        <button className="rounded-full bg-primary px-3 py-1 text-sm text-lg text-white">
+        <button className="rounded-full bg-primary px-3 py-1 text-lg text-primary-text">
           <BsPersonPlus />
         </button>
       )}
