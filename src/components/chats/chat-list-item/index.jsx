@@ -4,6 +4,7 @@ import { BsPeople } from "react-icons/bs";
 
 const ChatListItem = ({
   name,
+  photo,
   time_ago,
   message: { text, owner_name },
   count,
@@ -15,7 +16,7 @@ const ChatListItem = ({
   return (
     <div className="flex items-center gap-3 p-2">
       <div>
-        <ProfileImage className={"h-16 w-16"} />
+        <ProfileImage className={"h-16 w-16"} src={photo} />
       </div>
       <div className="flex flex-1 flex-col">
         <div className="flex justify-between">
