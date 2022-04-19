@@ -18,6 +18,9 @@ module.exports = {
         'primary-text': '#ffffff',
         accent: '#FF0000'
       },
+      gridTemplateRows: {
+        'layout': 'min-content auto min-content'
+      }
     },
   },
   plugins: [],
