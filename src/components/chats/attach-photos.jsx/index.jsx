@@ -1,4 +1,6 @@
-import { FaAngleDown, FaCheck } from "react-icons/fa";
+import { FaAngleDown, FaAngleUp, FaCheck } from "react-icons/fa";
+import { useState } from "react";
+import ProfileImage from "components/common/ProfileImage";
 
 const Photo = ({ active }) => {
   return (
@@ -14,15 +16,45 @@ const Photo = ({ active }) => {
   );
 };
 
-const AttachPhotos = () => {
+const Album = ({ title, count, icon }) => {
   return (
-    <div className="grid h-full grid-rows-layout">
-      <div className="flex w-full justify-center border-b border-gray-300 bg-white pt-5 pb-3">
-        <button className="flex items-center gap-1 font-bold text-primary">
-          All Photos <FaAngleDown />
+    <div className="flex gap-3 border-b border-gray-300 py-3">
+      <div>
+        <ProfileImage className="h-12 w-12 rounded-md " src={icon} />
+      </div>
+      <div className="flex flex-1 flex-col">
+        <span>{title}</span>
+        <span className="text-sm text-gray-300">{count}</span>
+      </div>
+    </div>
+  );
+};
+
+const AttachPhotos = () => {
+  const [openMenu, setOpenMenu] = useState(false);
+
+  return (
+    <div className="h-full">
+      <div className="sticky top-0 z-10 flex w-full justify-center border-b border-gray-300 bg-white pt-5 pb-3">
+        <button
+          className="flex items-center gap-1 font-bold text-primary"
+          onClick={() => setOpenMenu((b) => !b)}
+        >
+          All Photos {openMenu ? <FaAngleUp /> : <FaAngleDown />}
         </button>
       </div>
-      <div className="grid flex-1 grid-cols-3 gap-1 overflow-y-auto">
+
+      {openMenu && (
+        <div className="absolute top-14 z-20 flex h-full w-full flex-col border-y border-gray-300 bg-gray-500 bg-opacity-50 ">
+          <div className="bg-white px-3">
+            <Album title="All photos" count={13564} />
+            <Album title="Favorites" count={141} />
+            <Album title="People" count={1231} />
+          </div>
+        </div>
+      )}
+
+      <div className="grid grid-cols-3 gap-1 overflow-y-auto">
         <Photo />
         <Photo active />
         <Photo active />
@@ -47,7 +79,8 @@ const AttachPhotos = () => {
         <Photo />
         <Photo />
       </div>
-      <div className="flex-1 items-center gap-2 py-3 px-5">
+
+      <div className="sticky bottom-0 items-center gap-2 bg-white py-3 px-5">
         <button className="flex w-full flex-col items-center justify-center rounded-full bg-primary py-1 text-primary-text">
           <span className="text-sm font-bold">Attachment </span>
           <span className="text-sm">3 photo</span>

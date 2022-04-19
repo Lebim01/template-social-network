@@ -19,7 +19,7 @@ module.exports = {
         accent: '#FF0000'
       },
       gridTemplateRows: {
-        'layout': 'min-content auto min-content'
+        'layout': 'auto min-content'
       }
     },
   },
