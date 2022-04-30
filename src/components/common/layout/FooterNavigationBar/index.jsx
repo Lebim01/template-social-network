@@ -9,13 +9,13 @@ const FooterNavigationBar = ({ className = "" }) => {
 
   return (
     <div
-      className={`absolute bottom-0 flex w-full justify-around border-t border-gray-500 bg-white py-2`}
+      className={`fixed bottom-0 flex w-full justify-around border-t border-gray-500 bg-white py-2`}
     >
       <button
         className={`flex flex-col items-center justify-center gap-1 text-semitiny font-semibold ${
-          router.pathname === "/" ? "text-primary" : ""
+          router.pathname === "/feed" ? "text-primary" : ""
         }`}
-        onClick={() => router.push("/")}
+        onClick={() => router.push("/feed")}
       >
         <BsWindow className="h-4 w-4" />
         Feed

@@ -14,3 +14,8 @@
   height: 1px;
   @apply w-full bg-gray-100;
 }
+
+textarea:focus,
+input:focus {
+  outline: none;
+}

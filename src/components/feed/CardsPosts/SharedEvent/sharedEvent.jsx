@@ -1,7 +1,9 @@
 import OverloapProfiles from "components/common/OverloapProfiles";
+import { useRouter } from "next/router";
 import { BiStar } from "react-icons/bi";
 
 const SharedEvent = ({ name, place, date, people = [] }) => {
+  const router = useRouter();
   return (
     <div className="flex flex-col">
       <div className="relative h-32 w-full bg-gray-200">
