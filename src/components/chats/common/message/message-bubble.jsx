@@ -1,18 +1,19 @@
 import ProfileImage from "components/common/ProfileImage";
 import MessageResponse from "./message-response";
 import MyMessageBubble from "./my-message-bubble";
-import { useState } from "react";
-import { FaReply, FaCopy, FaStar, FaEllipsisH } from "react-icons/fa";
-import { BsEmojiSmile } from "react-icons/bs";
 import useLongPress from "hooks/useLongPress";
+import { useChat } from "components/chats/chat/chat-context";
 
 const MessageBubble = (props) => {
-  const [focused, setFocused] = useState(false);
+  const { recording, messageFocused, setMessageFocused } = useChat();
 
   const onLongPress = () => {
-    setFocused(true);
+    if (!recording) {
+      setMessageFocused(props);
+    }
   };
 
+  const isFocused = messageFocused?.id === props.id;
   const bind = useLongPress(onLongPress, () => {});
   const { owner, text, time, is_my = false, response, bubble } = props;
 
@@ -25,7 +26,7 @@ const MessageBubble = (props) => {
           <ProfileImage className="h-10 w-10" letters={owner.slice(0, 1)} />
         </div>
 
-        <div className={`w-full ${focused ? "z-20" : ""}`}>
+        <div className={`w-full ${isFocused ? "z-20" : ""}`}>
           {bubble ? (
             bubble
           ) : (
@@ -48,34 +49,7 @@ const MessageBubble = (props) => {
           )}
         </div>
       </div>
-      {focused && (
-        <>
-          <div
-            className="absolute top-0 left-0 z-10 h-full w-full bg-gray-400 bg-opacity-30"
-            onClick={() => setFocused(false)}
-          ></div>
-          <div className="absolute bottom-0 left-0 z-20 flex w-full justify-between bg-white py-3">
-            <Button text="Reply" icon={<FaReply className="text-xl" />} />
-            <Button
-              text="Reaction"
-              icon={<BsEmojiSmile className="text-xl" />}
-            />
-            <Button text="Copy" icon={<FaCopy className="text-xl" />} />
-            <Button text="Star" icon={<FaStar className="text-xl" />} />
-            <Button text="More" icon={<FaEllipsisH className="text-xl" />} />
-          </div>
-        </>
-      )}
     </>
-  );
-};
-
-const Button = ({ icon, text }) => {
-  return (
-    <button className="flex flex-1 flex-col items-center justify-center gap-1 text-primary">
-      {icon}
-      <span className="font-semibold">{text}</span>
-    </button>
   );
 };
 
