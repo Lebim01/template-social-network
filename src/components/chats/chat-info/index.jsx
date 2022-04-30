@@ -8,7 +8,7 @@ import { BsBell, BsStar, BsSearch, BsPlus } from "react-icons/bs";
 
 const MenuItem = ({ children, icon }) => {
   return (
-    <div className="flex items-center gap-3 border-b border-gray-300 px-4 py-3">
+    <div className="flex items-center gap-3 border-b border-gray-300 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 active:bg-gray-100">
       <div>{icon}</div>
       <div className="flex-1">{children}</div>
     </div>
@@ -51,7 +51,7 @@ const Button2 = ({ children, subtext }) => {
 
 const ChatInfo = () => {
   return (
-    <div className=" bg-gray-200 pb-3">
+    <div className=" h-full bg-gray-200 pb-3">
       <Header
         left={<BackButton />}
         right={
@@ -175,7 +175,7 @@ const ChatInfo = () => {
         </MenuItem>
       </div>
       <div className="my-3 bg-white py-3 px-5">
-        <span className="text-red-400">Leave chat</span>
+        <button className="text-red-400">Leave chat</button>
       </div>
     </div>
   );
