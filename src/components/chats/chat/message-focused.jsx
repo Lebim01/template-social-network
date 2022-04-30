@@ -19,10 +19,10 @@ const MessageFocused = () => {
       {messageFocused && (
         <>
           <div
-            className="absolute top-0 left-0 z-10 h-full w-full bg-gray-400 bg-opacity-30"
+            className="fixed top-0 left-0 z-10 h-full w-full bg-gray-400 bg-opacity-30"
             onClick={() => setMessageFocused(null)}
           ></div>
-          <div className="absolute bottom-0 left-0 z-20 flex w-full justify-between bg-white py-3">
+          <div className="fixed bottom-0 left-0 z-20 flex w-full justify-between bg-white py-3">
             <Button text="Reply" icon={<FaReply className="text-xl" />} />
             <Button
               text="Reaction"
