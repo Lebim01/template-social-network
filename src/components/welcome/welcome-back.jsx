@@ -6,7 +6,9 @@ const WelcomeBack = () => {
           <span className="text-3xl font-bold">Welcome back!</span>
         </div>
         <div className="flex items-center justify-center border-t border-gray-300 p-2">
-          <span className="text-gray-400">Don't have an account? Sign up</span>
+          <span className="text-gray-400">
+            {"Don't have an account? Sign up"}
+          </span>
         </div>
       </div>
     </div>
