@@ -1,14 +1,16 @@
-import DateBubble from "../common/date-bubble";
+import MiddleBubble from "../common/middle-bubble";
 import MessageBubble from "../common/message/message-bubble";
 import ChatBottom from "./chat-bottom";
 import ChatHeader from "./chat-header";
+import MessageVideo from "../common/message/message-video";
+import MessageImage from "../common/message/message-image";
 
 const Chat = () => {
   return (
     <div className="relative flex h-full flex-col bg-[#E1E7EE]">
       <ChatHeader />
       <div className="flex flex-1 flex-col gap-3 overflow-auto p-3">
-        <DateBubble date="14 September" />
+        <MiddleBubble text="14 September" />
         <MessageBubble
           owner={"Victor"}
           text="Hola"
@@ -29,8 +31,25 @@ const Chat = () => {
           reactions={[]}
           response={{
             owner: "Victor",
-            text: "Hello",
+            text: "Cancun is back, better than ever! ..",
           }}
+        />
+        <MiddleBubble text="Sophia Lynch leave group" />
+        <MiddleBubble text="Steve Roberts joined group" />
+        <MiddleBubble text="Jackson invite group Lillie" />
+        <MessageBubble
+          owner={"Victor"}
+          text="Hola"
+          time="12:48"
+          reactions={[]}
+          bubble={<MessageVideo />}
+        />
+        <MessageBubble
+          owner={"Victor"}
+          text="Hola"
+          time="12:48"
+          reactions={[]}
+          bubble={<MessageImage src="https://picsum.photos/id/3/300/300" />}
         />
       </div>
       <ChatBottom />
