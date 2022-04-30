@@ -15,17 +15,23 @@ const ChatBottom = () => {
         <button className="rounded-full bg-primary p-1 text-white">
           <FaPlus />
         </button>
-        <button className="text-xl text-gray-500">
-          <FiCamera />
-        </button>
-        <button className="text-2xl text-gray-500">
-          <AiOutlineGif />
-        </button>
+        {!inputFocused && (
+          <>
+            <button className="text-xl text-gray-500">
+              <FiCamera />
+            </button>
+            <button className="text-2xl text-gray-500">
+              <AiOutlineGif />
+            </button>
+          </>
+        )}
       </div>
       <div className="flex-1">
         <Input
           inputProps={{
             placeholder: "Message",
+            onFocus: () => setInputFocused(true),
+            onBlur: () => setInputFocused(false),
           }}
           iconRight={<BsEmojiSmile className="text-gray-500" />}
         />
