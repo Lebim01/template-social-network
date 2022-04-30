@@ -116,7 +116,7 @@ const Feed = () => {
         <Header />
         <Body />
       </div>
-      <FooterNavigationBar />
+      <FooterNavigationBar className="absolute" />
     </>
   );
 };

@@ -83,9 +83,14 @@ const AttachPhotos = () => {
       <div className="sticky bottom-0 items-center gap-2 bg-white py-3 px-5">
         <button className="flex w-full flex-col items-center justify-center rounded-full bg-primary py-1 text-primary-text">
           <span className="text-sm font-bold">Attachment </span>
-          <span className="text-sm">3 photo</span>
+          <span className="text-sm font-semibold">3 photo</span>
         </button>
-        <button className="w-full py-2 text-primary">Cancel</button>
+        <button
+          className="w-full py-2 font-semibold text-primary"
+          onClick={() => window.history.back()}
+        >
+          Cancel
+        </button>
       </div>
     </div>
   );

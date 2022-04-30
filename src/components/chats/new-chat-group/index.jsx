@@ -40,13 +40,18 @@ const NewChatGroup = () => {
     <div className="h-full bg-gray-200">
       <div className="flex items-end justify-between border-b border-gray-300 bg-white px-3 pt-5 pb-3">
         <div>
-          <button className="text-primary">Cancel</button>
+          <button
+            className="font-semibold text-primary"
+            onClick={() => window.history.back()}
+          >
+            Cancel
+          </button>
         </div>
         <div>
           <span className="text-lg font-bold">New Chat Group</span>
         </div>
         <div>
-          <button className="text-primary">Next</button>
+          <button className="font-semibold text-primary">Next</button>
         </div>
       </div>
       <div className="flex items-center gap-3 border-b border-gray-300 bg-white p-3">

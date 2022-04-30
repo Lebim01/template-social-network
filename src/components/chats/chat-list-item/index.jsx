@@ -1,6 +1,7 @@
 import ProfileImage from "components/common/ProfileImage";
 import { FaPen, FaCheck } from "react-icons/fa";
 import { BsPeople } from "react-icons/bs";
+import { useRouter } from "next/router";
 
 const ChatListItem = ({
   name,
@@ -13,8 +14,12 @@ const ChatListItem = ({
   is_watched,
   is_own,
 }) => {
+  const router = useRouter();
   return (
-    <div className="flex items-center gap-3 p-2">
+    <div
+      className="flex items-center gap-3 p-2 hover:cursor-pointer hover:bg-gray-200"
+      onClick={() => router.push("/chat")}
+    >
       <div>
         <ProfileImage className={"h-16 w-16"} src={photo} />
       </div>

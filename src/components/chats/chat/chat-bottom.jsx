@@ -7,8 +7,10 @@ import { BsEmojiSmile } from "react-icons/bs";
 import Input from "components/common/Input";
 import { useChat } from "./chat-context";
 import useLongPress from "hooks/useLongPress";
+import { useRouter } from "next/router";
 
 const ChatBottom = () => {
+  const router = useRouter();
   const [inputFocused, setInputFocused] = useState(false);
   const { recording, setRecording } = useChat();
 
@@ -34,7 +36,10 @@ const ChatBottom = () => {
             </button>
             {!inputFocused && (
               <>
-                <button className="text-xl text-gray-500">
+                <button
+                  className="text-xl text-gray-500"
+                  onClick={() => router.push("/chat/attach-photos")}
+                >
                   <FiCamera />
                 </button>
                 <button className="text-2xl text-gray-500">

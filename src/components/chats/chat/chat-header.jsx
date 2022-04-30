@@ -1,8 +1,10 @@
 import BackButton from "components/common/BackButton";
 import ProfileImage from "components/common/ProfileImage";
+import { useRouter } from "next/router";
 import { BsInfoCircle } from "react-icons/bs";
 
 const ChatHeader = () => {
+  const router = useRouter();
   return (
     <div className="flex flex-row items-center gap-3 border-b border-gray-300 bg-white p-3">
       <div>
@@ -18,7 +20,9 @@ const ChatHeader = () => {
         </div>
       </div>
       <div>
-        <BsInfoCircle className="text-2xl font-bold text-primary" />
+        <button onClick={() => router.push("/chat/chat-info")}>
+          <BsInfoCircle className="text-2xl font-bold text-primary" />
+        </button>
       </div>
     </div>
   );

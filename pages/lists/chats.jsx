@@ -1,14 +1,20 @@
 import { HiSearch } from "react-icons/hi";
 import { BsPencilSquare } from "react-icons/bs";
 import Chats from "components/chats";
+import FooterNavigationBar from "components/common/layout/FooterNavigationBar";
+import { useRouter } from "next/router";
 
 const ChatList = () => {
+  const router = useRouter();
   return (
-    <div>
-      <div className="sticky flex flex-col justify-between gap-2 border-b border-gray-200 p-3 text-xl">
+    <div className="relative h-full">
+      <div className="sticky top-0 z-20 flex flex-col justify-between gap-2 border-b border-gray-200 bg-white p-3 text-xl">
         <div className="flex w-full justify-between">
           <span className="text-3xl font-bold">Chats</span>
-          <button className=" text-primary">
+          <button
+            className=" text-primary"
+            onClick={() => router.push("/chat/new-group")}
+          >
             <BsPencilSquare />
           </button>
         </div>
@@ -23,7 +29,9 @@ const ChatList = () => {
           />
         </div>
       </div>
+
       <Chats />
+      <FooterNavigationBar className="absolute" />
     </div>
   );
 };
