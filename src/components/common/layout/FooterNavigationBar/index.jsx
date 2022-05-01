@@ -9,7 +9,7 @@ const FooterNavigationBar = ({ className = "" }) => {
 
   return (
     <div
-      className={`fixed bottom-0 flex w-full justify-around border-t border-gray-500 bg-white py-2`}
+      className={`fixed bottom-0 flex w-full max-w-xl justify-around border-t border-gray-500 bg-white py-2`}
     >
       <button
         className={`flex flex-col items-center justify-center gap-1 text-semitiny font-semibold ${

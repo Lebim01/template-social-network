@@ -45,7 +45,7 @@ const AttachPhotos = () => {
       </div>
 
       {openMenu && (
-        <div className="absolute top-14 z-20 flex h-full w-full flex-col border-y border-gray-300 bg-gray-500 bg-opacity-50 ">
+        <div className="absolute top-14 z-20 flex h-full w-full max-w-xl flex-col border-y border-gray-300 bg-gray-500 bg-opacity-50">
           <div className="bg-white px-3">
             <Album title="All photos" count={13564} />
             <Album title="Favorites" count={141} />
