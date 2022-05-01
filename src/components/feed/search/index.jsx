@@ -1,4 +1,4 @@
-import BackButton from "components/common/BackButton";
+import { BiArrowBack } from "react-icons/bi";
 import Input from "components/common/Input";
 import OverloapProfiles from "components/common/OverloapProfiles";
 import ProfileImage from "components/common/ProfileImage";
@@ -50,16 +50,18 @@ const PeopleSuggestion = ({ name, common, photo = {} }) => {
   );
 };
 
-const SearchScreen = () => {
+const SearchScreen = ({ onClose }) => {
   const refInput = useCallback((ref) => {
     if (ref) ref.focus();
   }, []);
 
   return (
-    <div className="absolute top-0 left-0 z-20 h-full w-full bg-white">
+    <div>
       <div className="border-b border-gray-200">
         <div className="flex items-center gap-3 p-3">
-          <BackButton />
+          <button onClick={onClose}>
+            <BiArrowBack />
+          </button>
 
           <Input
             inputProps={{

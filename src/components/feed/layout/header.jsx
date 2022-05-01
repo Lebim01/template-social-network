@@ -7,6 +7,7 @@ import {
 } from "react-icons/hi";
 import { useState } from "react";
 import SearchScreen from "../search";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Header = () => {
   const router = useRouter();
@@ -36,7 +37,18 @@ const Header = () => {
           </div>
         </div>
       </div>
-      {openSearch && <SearchScreen />}
+      <AnimatePresence>
+        {openSearch && (
+          <motion.div
+            initial={{ opacity: 0.7 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="absolute top-0 left-0 z-20 h-full w-full bg-white"
+          >
+            <SearchScreen onClose={() => setOpenSearch(false)} />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };
