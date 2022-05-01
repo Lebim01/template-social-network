@@ -31,7 +31,12 @@ const FooterNavigationBar = ({ className = "" }) => {
         </IconBadgeCount>
         Chats
       </button>
-      <button className="flex flex-col items-center justify-center gap-1 text-semitiny font-semibold">
+      <button
+        className={`flex flex-col items-center justify-center gap-1 text-semitiny font-semibold ${
+          router.pathname === "/lists/notifications" ? "text-primary" : ""
+        }`}
+        onClick={() => router.push("/lists/notifications")}
+      >
         <TiFlashOutline className="h-5 w-5" />
         Notifications
       </button>

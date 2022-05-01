@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import {
   HiSearch,
   HiOutlineVideoCamera,
@@ -6,6 +7,7 @@ import {
 } from "react-icons/hi";
 
 const Header = () => {
+  const router = useRouter();
   return (
     <div className="flex w-full flex-col gap-1 bg-primary">
       <div className="flex items-center justify-between py-3 px-3">
@@ -20,7 +22,9 @@ const Header = () => {
         <input placeholder="What's new" className="flex-1 p-2 text-lg" />
         <div className="flex gap-5 px-3 text-gray-400">
           <HiOutlineVideoCamera className="h-6 w-6" />
-          <HiOutlinePhotograph className="h-6 w-6" />
+          <button onClick={() => router.push("/chat/attach-photos")}>
+            <HiOutlinePhotograph className="h-6 w-6" />
+          </button>
           <HiOutlineDotsHorizontal className="h-6 w-6" />
         </div>
       </div>

@@ -34,7 +34,7 @@ const PostSharedEvent = ({
       <div className="mb-3 flex justify-between px-3">
         <div className="flex gap-10">
           <div className="flex items-center gap-2 text-gray-500">
-            <button className="rounded-full bg-gray-200 p-3 ">
+            <button className="rounded-full bg-gray-200 p-3">
               <FaRegThumbsUp className="h-5 w-5" />
             </button>
             <span>{likes_count}</span>

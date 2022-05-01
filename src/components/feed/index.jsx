@@ -10,7 +10,7 @@ import PostSharedEvent from "components/feed/CardsPosts/SharedEvent";
 
 const Body = () => {
   return (
-    <div className="flex flex-col gap-3 overflow-auto pb-3">
+    <div className="flex flex-col gap-3 overflow-auto pb-14">
       <PostSharedEvent
         owner_name="John Doe"
         time_ago="Yesterday"
